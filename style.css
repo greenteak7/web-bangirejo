@@ -1,0 +1,210 @@
+/*color teal
+light #E4F9F5
+med light #30E3CA
+med dark light #11999E
+dark #40514E
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #E4F9F5;
+}
+
+/*-----------------------HEADER-NAV---------------------------*/
+.main-header {
+    position: sticky;
+    display: flex;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    background: #40514E;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 80px;
+    flex-wrap: wrap;
+}
+.main-header h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #ffff;
+}
+.main-header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.main-header nav ul li a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #ffff;
+}
+
+@media (max-width: 920px) {
+    .main-header h1 {
+        font-size: 2em;
+    }
+}
+
+/*-----------------------SLIDES-------------------------------*/
+.mySlides {
+    display: none;
+}
+.mySlides img {
+    vertical-align: middle;
+    width: 100%;
+    height: 500px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+.pilus {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .pilus:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+ 
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}  
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+@media (max-width: 1000px) {
+    .mySlides img {
+        height: 400px;
+    }
+}
+
+/*-----------------------MAIN---------------------------------*/
+.main-tentang {
+    text-align: center;
+    text-justify: center;
+    margin: 20px 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.main-org {
+    width: 75%;
+    text-align: center;
+    text-justify: center;
+}
+.main-org .row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    margin: 10px 70px;
+}
+.main-org .card {
+    border: 0.2px solid rgba(221, 221, 221, 0.904);
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+}
+.main-org div img {
+    width: 150px;
+}
+.main-org div a {
+    font-size: 30px;
+    color: black;
+}
+
+.main-profil {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    background-color: #11999E;
+    border: 0.2px solid rgba(221, 221, 221, 0.904);
+    text-align: center;
+    padding: 20px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.main-profil h2 {
+    padding-bottom: 10px;
+}
+.main-profil img {
+    border-radius: 50px;
+    width: 100px;
+}
+.main-profil span {
+    color: #ffff;
+}
+.main-profil a {
+    font-size: 30px;
+    color: #ffff;
+}
+.main-profil p {
+    font-size: 15px;
+}
+
+@media (max-width: 1000px) {
+    .main-profil {
+        width: 25%;
+    }
+}
+
+/*-----------------------FOOTER--------------------------------*/
+footer {
+    background-color: #40514E;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    color: #ffff;
+    padding-left: 20px;
+    align-items: center;
+}

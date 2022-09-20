@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Kampung Bangirejo</title>
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/d3ba3aa0ce.js" 
+            crossorigin="anonymous">
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>Kampung Bangirejo</h1>
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#organisasi">Organisasi</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="img/main.png">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/1.png">
+                <div class="text">Malam Tirakatan</div>
+            </div>
+              
+            <div class="mySlides fade">
+                <img src="img/2.png">
+                <div class="text">Badminton bersama</div>
+            </div>
+              
+            <div class="mySlides fade">
+                <img src="img/3.png">
+                <div class="text">Kepemudaan</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="img/4.png">
+                <div class="text">Rumah</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+            <div style="text-align:center">
+              <span class="pilus" onclick="currentSlide(1)"></span> 
+              <span class="pilus" onclick="currentSlide(2)"></span> 
+              <span class="pilus" onclick="currentSlide(3)"></span>
+              <span class="pilus" onclick="currentSlide(4)"></span> 
+              <span class="pilus" onclick="currentSlide(5)"></span>  
+            </div>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <div class="main-tentang" id="tentang">
+            <article>
+                <section>
+
+                    <p>Kampung Bangirejo merupakan salah satu
+                    kampung di Yogyakarta yang berwilayah di
+                    Kelurahan Karangwaru dan Kecamatan Tegalrejo.
+                    </p>
+
+                </section>
+            </article>
+        </div>
+        
+        <main class="main-container">
+            <article class="main-org" id="organisasi">
+                <section>
+
+                    <h2>Organisasi</h2>                
+                    <div class="row">
+                        <div class="card">
+                            <h4>AMUBA</h4>
+                            <a href="https://www.instagram.com/amuba10__/?hl=id">
+                            <img src="img/logo-amuba.png">
+                            </a>
+                            <p>AMUBA (Anak Muda Bangirejo) menjadi wadah
+                                bagi pemuda-pemudi Bangirejo untuk 
+                                melakukan berbagai kegiatan kepemudaan.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h4>KTB Bangirejo</h4>
+                            <img src="img/logo-ktb.png" alt="amuba">
+                            <p>KTB (Kampung Tangguh Bencana)</p>
+                        </div>    
+                    </div>
+                </section>
+            </article>
+
+            <aside class="main-profil">
+                <article>
+                    <header>
+                        <h2>Profil Saya</h2>
+                        <img src="img/fotoku.png">
+                        <p>Halo.. Salam kenal!</p>
+                        <p>Saya <span>Devi Rachmawati</span></p>
+                        <br>
+                        <p>Lulusan Sarjana Keperawatan,
+                            Universitas Gadjah Mada dan saat ini
+                            melanjutkan pendidikan Magister Informatika,
+                            Universitas Islam Indonesia
+                        </p>
+                        <a href="https://www.instagram.com/green.teak/?hl=id">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </header>
+                </article>
+            </aside>
+        </main>
+    
+        <footer class="footer">
+            <p>Kampung Bangirejo &copy; 2022</p>
+        </footer>
+    </body>
+</html>
